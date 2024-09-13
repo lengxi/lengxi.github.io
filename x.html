@@ -1,0 +1,48 @@
+<html>
+<body>
+
+<script type="text/javascript">
+
+window.onload = function() {
+
+var loc = window.location.toString().split('?')[1],
+params = loc.split('&')[0],
+params2 = loc.split('&')[1],
+params3 = loc.split('&')[2]
+yframe = document.getElementById('yframe');
+aframe = document.getElementById('aframe');
+bframe = document.getElementById('bframe');
+yframe.src = yframe.src + params;
+aframe.src = aframe.src + params2 + '.mp4';
+bframe.src = bframe.src + params3 + '.mp4';
+
+};
+</script>
+
+<table>
+            <tbody><tr>
+              <th style="back">Original Video</th>
+              <th>A (Human Fail)</th>
+              <th>B (Model Pass)</th>
+            </tr>
+            <tr>
+              <td style="width:33%">
+                <div class="video-input">
+                  <iframe id="yframe" width="480" height="270" src="https://www.youtube.com/embed/"></iframe>
+                </div>
+              </td>
+              <td style="width:33%">
+                <div class="video-input">
+                  <iframe id="aframe" width="320" height="640" sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox" src="https://storage.cloud.google.com/video_autoflip/"></iframe>
+                </div>
+              </td>
+              <td style="width:33%">
+                <div class="video-input">
+                  <iframe id="bframe" width="320" height="640" sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox" src="https://storage.cloud.google.com/video_autoflip/"></iframe>
+                </div>
+              </td>
+            </tr>
+          </tbody></table>
+          
+</body>
+</html>
